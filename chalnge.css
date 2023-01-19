@@ -1,0 +1,346 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --heading:hsl(276, 100%, 81%);
+    --chatontheleft:hsl(276, 55%, 52%);
+    --chat-on-the-right:hsl(271, 15%, 43%);
+    --placeholdertext: hsl(206, 6%, 79%);
+    --mainheading: hsl(271, 36%, 24%);
+    --paragraph: hsl(270, 7%, 64%);
+    --liner1: hsl(293, 100%, 63%);
+    --liner2: hsl(264, 100%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --app-background: hsl(270, 20%, 96%);
+    --submit-button-background: hsl(271, 36%, 24%);
+    --radio-button-outline: hsl(289, 100%, 72%);
+    --Font-size: 16px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--White);
+    position: relative;
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left:auto;
+    margin-right: auto;
+}
+@media(min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+@media(min-width:992px){
+    .container{
+        width: 950px;
+    }
+}
+@media(min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+/* start background */
+
+.per-back .background1{
+    position: absolute;
+    width:30%;
+    height:90%;
+    background-image:linear-gradient(hsl(293, 81%, 65%),hsl(264, 100%, 61%));
+    border-bottom-left-radius:250px;
+    border-bottom-right-radius:250px;
+    left:-60px;
+    top: 0;
+    z-index: -1;
+}
+.per-back .background2{
+    position: absolute;
+    width:30%;
+    height:90%;
+    background-image:linear-gradient(hsl(270, 20%, 96%),hsl(255, 22%, 96%)) ;
+    border-top-left-radius:250px;
+    border-top-right-radius:250px;
+    right:0px;
+    bottom: -80px;
+    z-index: -1;
+}
+
+/* end background */
+/* start phone */
+
+.phone .container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+.phone .container .mobile{
+    width: 300px;
+    border: 10px solid rgb(255, 255, 255);
+    border-radius: 35px;
+    overflow: hidden;
+    margin-left: 40px;
+    box-shadow: 0 0 20px 15px rgba(68, 67, 67, 0.097);
+}
+.phone .container .mobile .frame{
+    border-radius: 10px;
+    position: relative;
+}
+.phone .container .mobile .frame::before{
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 25px;
+    left: 50%;
+    transform: translatex(-50%);
+    top: -1px;
+    background-color: white;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    z-index: 1;
+}
+.phone .container .mobile .frame::after{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 25%;
+    transform: translatex(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.398);
+    border-radius: 5px;
+    z-index: 2;
+}
+.phone .container .mobile .nav-bar{
+    display: flex;
+    align-items: center;
+    padding: 35px 10px 10px 10px;
+    background-image:linear-gradient(to left, hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    position: relative;
+}
+.phone .container .mobile .nav-bar::before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 32%;
+    transform: translatex(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.398);
+    border-radius: 5px;
+    z-index: 3;
+}
+.phone .container .mobile .nav-bar::after{
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 50px;
+    height: 7px;
+    background-color: rgba(0, 0, 0, 0.398);
+    border-radius: 5px;
+    z-index: 3;
+}
+.phone .container .mobile .nav-bar i{
+    color: white;
+    font-size: 14px;
+}
+.phone .container .mobile .nav-bar .back{
+    margin-right: 5px;
+}
+.phone .container .mobile .nav-bar .name-st span{
+    display: block;
+    margin: 3px 0px;
+    text-align: center;
+}
+.mobile .nav-bar .name-st .name{
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+}
+.mobile .nav-bar .name-st .on-line{
+    color:var(--paragraph);
+    font-size:8px;
+    font-weight: 700;
+}
+.mobile .nav-bar .info{
+    display: flex;
+    justify-content: end;
+    width: 50%;
+}
+.phone .container .mobile .nav-bar img{
+    width: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid white;
+}
+/* start phone */
+/* start caht */
+.phone .container .chat{
+    background-color: var(--app-background);
+    padding: 7px;
+}
+.phone .container .chat .chat-1 p{
+    background-color:  hsl(276, 100%, 81%);
+    color: var(--chatontheleft);
+    margin: 10px 0px;
+    font-size: 12px;
+    padding: 7px 10px;
+    width: 70%;
+    border-radius: 10px;
+    border-bottom-left-radius: 3px;
+    font-family: 300;
+}
+.phone .container .chat .chat-2{
+    direction: rtl;
+}
+.phone .container .chat .chat-2 .dogs{
+    display: flex;
+    justify-content: flex-start;
+}
+.phone .container .chat .chat-2 img {
+    width: 50px;
+    border-radius: 15px;
+    margin: 7px 3px;
+}
+.phone .container .chat .chat-2 .massage{
+    width: 70%;
+    text-align: left;
+}
+.phone .container .chat .chat-2 p{
+    display: block;
+    background-color: white;
+    margin: 10px 0px;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 8px;
+    border-radius: 10px;
+    border-bottom-right-radius: 3px;
+    direction:ltr;
+}
+.phone .container .chat .chat-3 p{
+    background-color:  hsl(276, 100%, 81%);
+    color: var(--chatontheleft);
+    margin: 10px 0px;
+    font-size: 12px;
+    padding: 7px 10px;
+    width: 70%;
+    border-radius: 10px;
+    border-bottom-left-radius: 3px;
+    font-family: 300;
+}
+.phone .container .chat .chat-3 .mony{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image:linear-gradient(to right, hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    width: 80%;
+    padding: 12px 10px;
+    margin:10px 0px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: white;
+    border-bottom-left-radius: 3px;
+}
+.phone .container .chat .chat-3 .mony .time{
+    font-size: 10px;
+    color: var(--app-background);
+}
+.phone .container .chat .chat-3 i{
+    margin-right: 5px;
+}
+.phone .container .chat .chat-3 h2{
+    font-size: 15px;
+    margin-right: 7px;
+}
+.phone .container .frame .input{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    background-color: var(--app-background);
+    position: relative;
+}
+.phone .container .frame .input input{
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    width: 90%;
+    padding-left: 10px;
+    outline: none;
+}
+.phone .container .frame .input i{
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    transform: translatey(-50%);
+    background-color: black;
+    width: 35px;
+    height: 65%;
+    color: white;
+    border-radius: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.phone .container .frame .input input::placeholder{
+    text-transform: capitalize;
+    font-size: 13px;
+    color: var(--placeholdertext);
+    transition: 0.3s;
+    opacity: 1;
+}
+.phone .container .frame .input input:focus::placeholder{
+    opacity: 0;
+}
+.phone .container .text{
+    flex-basis: 50%;
+    padding: 15px;
+}
+.phone .container .text h2{
+    margin: 20px 0px;
+    color: var(--mainheading);
+    font-size: 40px;
+    font-weight: 500;
+}
+.phone .container .text p{
+    line-height: 1.5;
+    color: var(--paragraph)
+}
+@media(max-width:728px){
+    .per-back .background1{
+        width: 70%;
+        border-bottom-left-radius:200px;
+        border-bottom-right-radius:200px;
+    }
+    .per-back .background2{
+        width: 50%;
+        border-bottom-left-radius:200px;
+        border-bottom-right-radius:200px;
+    }
+    .phone{
+        justify-content: center;
+    }
+    .phone .container .mobile{
+        margin-top: 40px;
+        margin-left: 0px;
+    }
+    .phone .container .text{
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
+/* end caht */
